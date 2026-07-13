@@ -8,7 +8,7 @@ import type { User } from '@supabase/supabase-js'
 import {
   Home, LayoutGrid, UtensilsCrossed, BedDouble, Key,
   LayoutDashboard, MessageSquare, Inbox, CalendarCheck,
-  Plus, LogOut, BarChart2, ShieldCheck, Flag, Building2, List, Users,
+  Plus, LogOut, BarChart2, ShieldCheck, Flag, Building2, List, Users, GraduationCap,
 } from 'lucide-react'
 import { supabase } from '@/lib/supabase'
 import { setLocaleAction } from '@/features/i18n/actions'
@@ -464,6 +464,9 @@ export default function Navbar() {
                       <Link href="/admin/reports" className="flex items-center gap-2.5 px-4 py-2 text-sm text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/20" onClick={closeMenus}>
                         <Flag className="h-3.5 w-3.5" />{t('reportListings')}
                       </Link>
+                      <Link href="/admin/universities" className="flex items-center gap-2.5 px-4 py-2 text-sm text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/20" onClick={closeMenus}>
+                        <GraduationCap className="h-3.5 w-3.5" />{t('adminUniversities')}
+                      </Link>
                     </>
                   )}
 
@@ -591,6 +594,9 @@ export default function Navbar() {
                       </Link>
                       <Link href="/admin/reports" className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/20" onClick={closeMenus}>
                         <Flag className="h-4 w-4 shrink-0" />{t('reportListings')}
+                      </Link>
+                      <Link href="/admin/universities" className="flex items-center gap-3 rounded-xl px-3 py-2.5 text-sm text-teal-600 hover:bg-teal-50 dark:hover:bg-teal-900/20" onClick={closeMenus}>
+                        <GraduationCap className="h-4 w-4 shrink-0" />{t('adminUniversities')}
                       </Link>
                     </>
                   )}
